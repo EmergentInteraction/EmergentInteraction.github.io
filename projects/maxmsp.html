@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>max msp</title>
+  <meta name="description" content="">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="/projects/maxmsp.html">
+
+  <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml" />
+</head>
+
+  <body>
+    <!-- <div class='everything'> -->
+    <!--- Header and nav template site-wide -->
+<header>
+
+
+
+
+
+
+
+
+
+    <nav class="group">
+
+
+	
+		
+		    
+		      <a href="/">index</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/projects/cpg_creativity.html">Projects</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/music/music.html">Music</a>
+		    
+	    
+  	
+		
+		    
+		      <a href="/about/">About</a>
+		    
+	    
+  	
+    <a href="/DanBennett_academicCV.pdf">CV</a>
+	</nav>
+
+
+    <nav class="sidebar">
+
+        
+    
+    
+    
+    
+        
+          <a href="/projects/cpg_creativity.html">CPGs</a>
+        
+    
+    
+    
+    
+    
+        
+          <a class="active" href="/projects/maxmsp.html" class="active">max msp</a>
+        
+    
+    
+
+
+
+
+    </nav>
+
+
+    <!-- <div class="vertline0"></div> -->
+    <!-- <div class="vertline1"></div> -->
+<!--     <div class="vertline2"></div>
+    <div class="vertline3"></div>
+    <div class="vertline4"></div>
+    <div class="vertline4_1"></div>
+    <div class="vertline5"></div>
+    <div class="vertline5_1"></div> -->
+
+<!-- 	<div class="vertline6"></div>
+	<div class="vertline7"></div>
+	<div class="vertline8"></div>
+	<div class="vertline9"></div> -->
+
+
+
+</header>
+    <article class="group">
+      
+<h1>max msp</h1>
+
+
+<p class="subtitle"></p>
+
+<p>This page collects the externals I’ve built for MAX MSP. Two of my interests in computer music are the use of non-linear dynamic processes, and the creation of rhythms which imply but evade a sense of pulse. These externals follow from those interests. None of these are in any sense complete instruments. They are novel building blocks which I have used in my own music, and that could be used in 1000 other ways. The audio demos here are raw, to show the behaviour of the objects not examples of you would use them - that is left as an exercise for the reader.</p>
+
+<hr />
+<h2 id="cpg-objects">cpg~ objects</h2>
+
+<p>A set of objects for working with Central Pattern Generator neural networks in MAX/MSP. <a href="/projects/cpg_max.html">See the project page here</a></p>
+
+<hr />
+
+<h2 id="hyperuniform">hyperuniform~</h2>
+
+<p><span class="newthought">A signal rate, “stochastic” rhythm generator.</span>  The process behind hyperuniform~ is my impressionistic take on the concept of “hyperuniformity in the disordered, jammed, packing of soft spheres””  as outlined in <a href="https://arxiv.org/pdf/1402.6058">this paper</a>. The object allows for direct control of some rhythmic elements within an overall stochastic rhythmic environment.</p>
+
+<p><a href="https://github.com/DanBennettDev/hyperuniform">Externals, code and more info avaliable at github</a></p>
+
+<h3 id="why">Why?</h3>
+<p>First off, the overall shape of the thing is appealing to me: a fixed set of discrete units of time is strung together, and deformed, and this happens in a controllably random way. It has the potential to avoid the rhythmic grid, and strong repetition, while retaining patterning that the ear can follow.</p>
+
+<p>It’s also slightly inspired by neuroscientific research on rhythm perception. Research suggests this is best modelled as both pulse-based and stochastic. It is thought that we anticipate the next rhythmic event based on previous events, but via a stochastic estimation mechanism (see e.g. <a href="https://www.amazon.co.uk/Rhythm-Music-Brain-Foundations-Applications/dp/041596475X?tag=ad-backfill-amzn-no-or-one-good-20"><em>Rhythm Music and the Brain</em> by Thaut</a>).</p>
+
+<hr />
+
+<h2 id="bounce">bounce~</h2>
+
+<p><a href="http://www.skjolbrot.org/skjfiles/bounce~.zip">windows download</a></p>
+
+<p><a href="http://www.skjolbrot.org/skjfiles/dbbounceMacOSX.zip">OSX download</a></p>
+
+<p><a href="https://github.com/DanBennettDev/db.bounce">github</a></p>
+
+<p>This is my implementation and slight development of an audio synthesis technique described by <a href="http://ciat-lonbarde.net/">Peter Blasser of Ciat Lonbarde fame</a>. In simple terms it is a bank of chaotic triangle wave oscillators. The behaviour of the oscillators can be imagined, very roughly, as following the path of a group of imaginary balls bouncing around in a gravity and friction-free tube. When a ball hits another ball, or hits the top or bottom of the tube, it reverses its direction of travel. The paths of these balls are output as waveforms. With a single ball this is a crude (non-bandlimited) triangle oscillator, but when you add a couple more, things become much more interesting. This is great for patterned-but-unpredictable LFOs, or if you like noisy textural synthesis (and I do) for audio.</p>
+
+<p>features of my implementation:</p>
+
+<ul>
+  <li>control over triangle slope</li>
+  <li>waveshaping (to pseudo-sinusoid or hyperbolic sine)</li>
+  <li>control of voice-to-voice frequency modulation (position of ball A modulates the speed of ball B, etc.)</li>
+  <li>optional antialiasing adapted from the polynomial transition region technique. (You can turn this off if if you just want to use if as an LFO.)</li>
+</ul>
+
+<p>It’s best suited to quite specific, textural use cases, but if you like this sort of thing (rythmically articulated digital chaos!) it’s a lot of fun. I think it’s very expressive and very playable, and I use it for live performances quite often.
+Here are some (not very musical) demos</p>
+
+<iframe width="55%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/124561349&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+<p><img src="./bounce_patch.jpg" alt="The Help patch for bounce~" /></p>
+
+<hr />
+
+<h2 id="henon">henon~</h2>
+
+<p><a href="https://github.com/DanBennettDev/db.henon-">github</a></p>
+
+<p>This is a sonification of the <a href="https://en.wikipedia.org/wiki/H%C3%A9non_map">Hénon map</a> equation. It produces interesting noise textures in certain parts of its parameter space, and interesting transitions between noise and pitch in others. There is a choice of interpolation methods (drop sample, linear and b-spline) which affect the sound character considerably.
+I built this as a framework for sonifying other non-linear equations. I tried a few other equations out, but the Hénon map was probably the most usueable I found. It’s very simple to substitute in other equations you’re interested in. Just swap out my au_henon_calc function for one calculating the equation of your choice, then change the parameter inputs to match.</p>
+
+
+
+
+    </article>
+    <span class="print-footer">max msp - </span>
+    <footer>
+
+<div class="credits">
+<span>&copy; 2020 &nbsp;&nbsp;</span>
+<span>Developed on top of the <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a> in <a href="//jekyllrb.com">Jekyll</a>.</span> 
+</div>  
+</footer>
+    <!-- </div> -->
+  </body>
+</html>
