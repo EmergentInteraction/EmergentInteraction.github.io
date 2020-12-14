@@ -1,0 +1,77 @@
+// Font imports file. If you don't want these fonts, comment out these and add your own into the fonts directory 
+// and point the src attribute to the file.
+// 
+
+@charset "UTF-8";
+
+/*
+@font-face {
+  font-family: 'AkzidenzGrotesk';
+  src: url("../fonts/akzidenz/AkzidenzGrotesk-Roman.woff2") format("woff2"), url("../fonts/AkzidenzGrotesk-Roman.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'AkzidenzGrotesk';
+  src: url("../fonts/akzidenz/AkzidenzGrotesk-LightOsF.woff2") format("woff2"), url("../fonts/AkzidenzGroteskBE-It.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+*/
+
+  @font-face {
+  font-family: 'AkzidenzGrotesk';
+  src: url("../fonts/akzidenz/AkzidenzGrotesk-LightOsF.woff2") format("woff2"), url("../fonts/AkzidenzGrotesk-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+
+@font-face {
+  font-family: 'AkzidenzGrotesk';
+  src: url("../fonts/akzidenz/AkzidenzGrotesk-LightItalicOsF.woff2") format("woff2"), url("../fonts/AkzidenzGroteskBE-It.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+  
+
+  @font-face {
+  font-family: 'AkzidenzGrotesk';
+  src: url("../fonts/akzidenz/AkzidenzGrotesk-BoldItalic.woff2") format("woff2"), url("../fonts/AkzidenzGroteskBE-It.woff") format("woff");
+  font-weight: bold;
+  font-style: italic; }
+
+  @font-face {
+  font-family: 'AkzidenzGrotesk';
+  src: url("../fonts/akzidenz/AkzidenzGrotesk-Super.woff2") format("woff2"), url("../fonts/AkzidenzGrotesk-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+  
+  
+  @font-face {
+  font-family: 'AkzidenzGrotesk-Med';
+  src: url("../fonts/akzidenz/AkzidenzGrotesk-Medium.woff2") format("woff2"), url("../fonts/AkzidenzGrotesk-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+  @font-face {
+  font-family: 'AkzidenzGrotesk-Med';
+  src: url("../fonts/akzidenz/AkzidenzGrotesk-Medium.woff2") format("woff2"), url("../fonts/AkzidenzGrotesk-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }  
+
+  @font-face {
+  font-family: 'AkzidenzGrotesk-condensed';
+  src: url("../fonts/akzidenz/AkzidenzGrotesk-ExtraBoldCondAlt.woff2") format("woff2"), url("../fonts/AkzidenzGrotesk-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+  @font-face {
+  font-family: 'AkzidenzGrotesk-condensed';
+  src: url("../fonts/akzidenz/AkzidenzGrotesk-BoldCondItalic.woff2") format("woff2"), url("../fonts/AkzidenzGrotesk-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: italic; }
+
+
+@font-face {
+  font-family: 'futura';
+  src: url("../fonts/futura_bold_font-webfont.woff2") format("woff2"), url("../fonts/futura_bold_font-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
