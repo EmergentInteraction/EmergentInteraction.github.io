@@ -285,7 +285,7 @@ a {
 strong {
   font-family: "AkzidenzGrotesk-Med", "Helvetica", "Arial", sans-serif; }
 
-p > a, h3 > a {
+p > a, h3 > a, em > a {
   color: #828282;
   text-decoration: none;
   position: relative;
@@ -296,16 +296,21 @@ p > a, h3 > a {
 */
   white-space: nowrap;
   /*border-bottom: 2px dotted $contrast-color;*/ }
-  p > a:after, h3 > a:after {
-    border-bottom: 0.1em dotted rgba(39, 168, 219, 0.7);
+  p > a:after, h3 > a:after, em > a:after {
+    border-bottom: 0.1em solid rgba(39, 168, 219, 0.7);
     z-index: -1;
     content: "";
     position: absolute;
     left: 5%;
     width: 90%;
     bottom: 0em; }
-  p > a:hover:after, h3 > a:hover:after {
-    border-bottom: 0.15em solid rgba(39, 168, 219, 0.7); }
+  p > a:hover, h3 > a:hover, em > a:hover {
+    color: #FFF; }
+  p > a:hover:after, h3 > a:hover:after, em > a:hover:after {
+    border-bottom: 1.2em solid rgba(39, 168, 219, 0.7);
+    top: -1.2em;
+    left: 0%;
+    width: 100%; }
 
 body {
   width: 100%;
